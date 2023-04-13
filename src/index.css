@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dancing Script", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.todoAppContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+h1{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.top {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add {
+  cursor: pointer;
+  background-color: black;
+  color: whitesmoke;
+  padding: 1rem 2rem;
+}
+
+input {
+  border-bottom: 2px solid black;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  width: 400px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.iconControllers {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  gap: 1rem;
+  transform: translateY(-50%);
+}
+
+
