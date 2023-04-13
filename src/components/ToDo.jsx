@@ -7,10 +7,10 @@ const ToDo = ({ toDoText, deleteToDo, updateItem }) => {
     <div className="eachTodo">
         <div className="todoText">
             {toDoText}
-            <div className="iconControllers">
+        </div>
+        <div className="iconControllers">
                 <BiEdit className="icon" onClick={updateItem} />
                 <AiTwotoneDelete className="icon" onClick={deleteToDo} />
-            </div>
         </div>
       
     </div>

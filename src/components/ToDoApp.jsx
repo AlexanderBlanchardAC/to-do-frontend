@@ -21,9 +21,9 @@ const ToDoApp = () => {
         setToDoId(_id)
     }
 
-    const makeListItem = (e) => {
-        setToDoText(e.target.value)
-    }
+    // const makeListItem = (e) => {
+    //     setToDoText(e.target.value)
+    // }
 
 
   return (
@@ -35,7 +35,7 @@ const ToDoApp = () => {
                     placeholder="Add to list..."
                     type="text"
                     value={toDoText}
-                    onChange={makeListItem}
+                    onChange={(e) => setToDoText(e.target.value)}
                 />
                 <div className="addToDo"
                     onClick={updating ? () => updateToDo(toDoId, toDoText, setToDo, setToDoText, setUpdating) :
@@ -49,7 +49,7 @@ const ToDoApp = () => {
                     toDoText={item.toDoText}
                     updateItem = {() => updateItem(item._id, item.toDoText)}
                     deleteToDo = {() => deleteToDo(item._id, setToDo)}
-                />
+                    />
                 )}
             </div>
         </div>
