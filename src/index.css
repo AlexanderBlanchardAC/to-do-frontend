@@ -57,7 +57,8 @@ input {
   padding: 1rem;
   outline: none;
   border: none;
-  width: 400px;
+  width: 400px; 
+  
 }
 
 .icon {
@@ -73,12 +74,12 @@ input {
   gap: 1rem;
   transform: translateY(-50%); */
   width: 20%;
-  background-color: darkslategrey;
+  background-color: lightslategrey;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  border: 1px solid black;
+  border: 1px solid darkslategrey;
 }
 
 .list {
@@ -94,6 +95,8 @@ input {
   border: 1px solid black;
   color: black;
   margin-bottom: 1rem;
+  align-items: center;
+  padding-left: 1rem;
  
 }
 
