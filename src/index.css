@@ -80,6 +80,7 @@ input {
   align-items: center;
   gap: 1rem;
   border: 1px solid darkslategrey;
+  height: 100%;
 }
 
 .list {
