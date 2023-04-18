@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const baseUrl = "https://alexander-to-do.onrender.com"
 
+
 const getAllToDos = (setToDo) => {
     axios.get(baseUrl)
     .then(({ data }) => {
@@ -10,11 +11,11 @@ const getAllToDos = (setToDo) => {
     })
 }
 
-const addToDo = (toDoText, setToDoText, setToDo) => {
-    axios.post(`${baseUrl}/save`, { toDoText} )
+const addToDo = (text, setText, setToDo) => {
+    axios.post(`${baseUrl}/save`, { text })
         .then((data) => {
             console.log(data);
-            setToDoText("")
+            setText("")
             getAllToDos(setToDo)
         })
         .catch((err) => console.log(err))
@@ -29,10 +30,10 @@ const deleteToDo = (_id, setToDo) => {
     .catch((err) => console.log(err))
 }
 
-const updateToDo = (toDoId, toDoText, setToDo, setToDoText, setUpdating) => {
-    axios.post(`${baseUrl}/update`, { _id: toDoId, toDoText })
+const updateToDo = (toDoId, text, setToDo, setText, setUpdating) => {
+    axios.post(`${baseUrl}/update`, { _id: toDoId, text })
     .then((data) => {
-        setToDoText("")
+        setText("")
         setUpdating(false)
         getAllToDos(setToDo)
     })

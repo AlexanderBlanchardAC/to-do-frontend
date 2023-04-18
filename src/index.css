@@ -11,10 +11,23 @@ body {
   font-family: "Dancing Script", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.toDoApp {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  padding: 1rem;
 }
 
 .todoAppContainer {
-  max-width: 600px;
+  max-width: 400px;
   margin: auto;
   padding: 1rem 2rem;
 }
@@ -26,12 +39,13 @@ h1{
 
 .top {
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem 0;
   justify-content: center;
   gap: 1rem;
+  border: 1px solid black;
 }
 
-.add {
+.addToDo {
   cursor: pointer;
   background-color: black;
   color: whitesmoke;
@@ -48,16 +62,46 @@ input {
 
 .icon {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .iconControllers {
-  display: flex;
+  /* display: flex;
   position: absolute;
   top: 50%;
   right: 20px;
   gap: 1rem;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+  width: 20%;
+  background-color: lightslategrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid darkslategray;
+  height: 100%;
 }
 
+.list {
+  color: black;
+  border: 2px solid black;
+  min-height: 600px;
+  padding: 1rem;
+}
 
+.eachTodo {
+  height: 100px;
+  display: flex;
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 1rem;
+  align-items: center;
+ padding-left: 1rem;
+ 
+}
+
+.todoText {
+  width: 80%;
+  color: black;
+  font-size: 2rem;
+}

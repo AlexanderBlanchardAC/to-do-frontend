@@ -6,7 +6,7 @@ import { addToDo, getAllToDos, deleteToDo, updateToDo } from '../utils/ApiHandle
 const ToDoApp = () => {
 
     const [toDo, setToDo] = useState([])
-    const [toDoText, setToDoText] = useState("")
+    const [text, setText] = useState("")
     const [updating, setUpdating] = useState(false)
     const [toDoId, setToDoId] = useState("")
 
@@ -15,15 +15,15 @@ const ToDoApp = () => {
         getAllToDos(setToDo)
     }, [])
 
-    const updateItem = (_id, toDoText) => {
+    const updateItem = (_id, text) => {
         setUpdating(true)
-        setToDoText(toDoText)
+        setText(text)
         setToDoId(_id)
     }
 
-    const makeListItem = (e) => {
-        setToDoText(e.target.value)
-    }
+    // const makeListItem = (e) => {
+    //     setToDoText(e.target.value)
+    // }
 
 
   return (
@@ -34,22 +34,22 @@ const ToDoApp = () => {
                 <input
                     placeholder="Add to list..."
                     type="text"
-                    value={toDoText}
-                    onChange={makeListItem}
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
                 />
                 <div className="addToDo"
-                    onClick={updating ? () => updateToDo(toDoId, toDoText, setToDo, setToDoText, setUpdating) :
-                     () => addToDo(toDoText, setToDoText, setToDo)}>
+                    onClick={updating ? () => updateToDo(toDoId, text, setToDo, setText, setUpdating) :
+                     () => addToDo(text, setText, setToDo)}>
                     {updating ? "Update" : "Add"}
                 </div>
             </div>
             <div className="list">
                 {toDo.map((item) => <ToDo
                     key={item._id}
-                    toDoText={item.toDoText}
-                    updateItem = {() => updateItem(item._id, item.toDoText)}
+                    text={item.text}
+                    updateItem = {() => updateItem(item._id, item.text)}
                     deleteToDo = {() => deleteToDo(item._id, setToDo)}
-                />
+                    />
                 )}
             </div>
         </div>
