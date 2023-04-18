@@ -40,4 +40,5 @@ const updateToDo = (toDoId, text, setToDo, setText, setUpdating) => {
     .catch((err) => console.log(err))
 }
 
+
 export { getAllToDos, addToDo, deleteToDo, updateToDo}

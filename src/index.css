@@ -73,13 +73,19 @@ input {
   gap: 1rem;
   transform: translateY(-50%); */
   width: 20%;
+
   background-color: lightslategrey;
+
+
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
   border: 1px solid darkslategray;
   height: 100%;
+
 }
 
 .list {
@@ -97,6 +103,7 @@ input {
   margin-bottom: 1rem;
   align-items: center;
  padding-left: 1rem;
+
  
 }
 
